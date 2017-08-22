@@ -19,6 +19,18 @@ class OrdersController < ApplicationController
       render :new
     end
   end
+  def edit
+    @order = Order.find(params[:id])
+    render :edit
+  end
+  def update
+    @order = Order.edit(params[:id])
+    if@order.update(order_params)
+      redirect_to orders_path
+    else
+      render :edit
+    end
+  end
 
   private
   def order_params

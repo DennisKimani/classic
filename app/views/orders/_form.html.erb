@@ -1,4 +1,4 @@
-require 'layouts/errors'
+<%= render 'layouts/errors', :object => @order %>
 
 <%= form_for @order do |f| %>
 <%= f.label :status %>

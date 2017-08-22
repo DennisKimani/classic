@@ -19,6 +19,18 @@ class ProductsController < ApplicationController
       render :new
     end
   end
+  def edit
+    @product = Product(params[:id])
+    render :edit
+  end
+  def update
+    @product = Product.edit(params[:id])
+    if @product.update(product_params)
+      redirect_to products_path
+    else
+      render :edit
+    end
+  end
 
   private
   def product_params
