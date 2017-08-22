@@ -1,0 +1,9 @@
+<h1>Welcome.</h1>
+
+<h3>Here are some of the products we have.</h3>
+
+<ul>
+  <%= @products.each do |product| %>
+   <li><%= product.name %></li>
+  <% end %>
+</ul>
