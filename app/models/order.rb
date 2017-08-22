@@ -1,3 +1,3 @@
 class Order < ActiveRecord::Base
-  validate :status, :presence => true
+  validates :status, :presence => true
 end
