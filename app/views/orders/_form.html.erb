@@ -1,0 +1,7 @@
+require 'layouts/errors'
+
+<%= form_for @order do |f| %>
+<%= f.label :status %>
+<%= f.text_field :status %>
+<%= f.submit %>
+<% end %>
