@@ -19,4 +19,9 @@ class OrdersController < ApplicationController
       render :new
     end
   end
+
+  private
+  def order_params
+    params.require(:order).permit(:name, :price)
+  end
 end
