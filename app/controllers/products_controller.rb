@@ -20,11 +20,11 @@ class ProductsController < ApplicationController
     end
   end
   def edit
-    @product = Product(params[:id])
+    @product = Product.find(params[:id])
     render :edit
   end
   def update
-    @product = Product.edit(params[:id])
+    @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to products_path
     else
