@@ -1,5 +1,8 @@
 <h2><%= @order.status %></h2>
 
 <hr>
-
+<p><%= link_to "Edit", edit_order_path(@order) %></p>
+<p><%= link_to "Delete", order_path(@order),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
 <p><%= link_to "Return to orders", orders_path %></p>
